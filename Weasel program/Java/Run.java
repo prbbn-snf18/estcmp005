@@ -50,7 +50,7 @@ public class Run {
     public char[] mutarPalavra(Random rand, char[] palavra, char[] alfa){
         for (int i = 0; i < palavra.length; i++){
             if (rand.nextFloat() > 0.94){       //Valor pra compensar o arredondamento
-                word[i] = alfa[rand.nextInt(26)];
+                palavra[i] = alfa[rand.nextInt(26)];
             }
         }
         return palavra;
@@ -85,10 +85,20 @@ public class Run {
             for (Integer chave : hm.keySet()){
                 if (chave > acertos){
                     acertos = chave;
-                    vencedor = hm.get(key);
+                    vencedor = hm.get(chave);
                 }
             }
         }
         return vencedor;
+    }
+
+    public int acertos(char[] melhor, char[] objetivo){
+        int same = 0;
+        for(int i = 0; i < 28; i++){
+            if(melhor[i] == objetivo[i]){
+                same = same + 1;
+            }
+        }
+        return same;
     }
 }
