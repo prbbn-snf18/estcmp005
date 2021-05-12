@@ -54,7 +54,7 @@ int main(){
         }
 
         if (melhor_i) strcpy(spec[0], spec[melhor_i]);
-        printf("Acertos: %d: %s\n", melhor, spec[0]);
+        printf("Erros: %d: %s\n", melhor, spec[0]);
     } while(melhor);
 
     return 0;
