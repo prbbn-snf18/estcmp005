@@ -9,14 +9,16 @@ inteiros que estão no intervalo compreendido por eles.
 int main(){
     int a, b = 0;
     printf("Escreva dois números inteiros:\n");
-    scanf("%d\n", a);
+    scanf("%d", &a);
+    scanf("%d", &b);
+    
 
     if(a > b){
-        for (int i = 0; i < (a-b); i++){
+        for (int i = 1; i < (a-b); i++){
             printf("%d\n", (i + b));
         }
     }else if(b > a){
-        for (int i = 0; i < (b-a); i++){
+        for (int i = 1; i < (b-a); i++){
             printf("%d\n", (i + a));
         }
     }else{
